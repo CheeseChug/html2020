@@ -93,7 +93,7 @@ main p {
     border-radius: 8px;
 }
 
-#contact {
+#contact #rental h2 {
     text-align: center;
 }
 
@@ -109,6 +109,56 @@ main p {
     height: 50%;
 }
 
+/* Style rules for table */
+table {
+    border: 1px solid #373684;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th, td {
+    border: 1px solid #373684;
+}
+
+th {
+    background-color: #373684;
+    color: #fff;
+    font-size: 1.15em;
+}
+
+tr:nth-child(odd) {
+    background-color: #b7b7e1;
+}
+
+/* Style rules for form elements */
+fieldset, input {
+    margin: 2%;
+}
+fieldset legend {
+    font-weight:bold;
+    font-size:1.25em;
+}
+label {
+    display:block;
+    padding-top: 3%;
+}
+#submit {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 3%;
+    background-color: #b7b7e1;
+    font-size:1em;
+}
 /* Style rules for footer */
 footer {
     text-align: center;
@@ -157,11 +207,11 @@ footer a {
         font-size: 1.5em;
         border-right: 1px solid #e5e9fc;
     }
-    ul li:last-child {
+/*    ul li:last-child {
         border: 1px solid red;
         color: red;
-        border-right: 0px;
-    }
+        border-right: 0px; 
+    } */
     nav li a {
         padding-top: 0.25em;
         padding-bottom: 0.25em;
@@ -172,6 +222,14 @@ footer a {
     .map {
         width: 500px;
         height: 450px;
+    }
+    /* Tablet Viewport: Style rule for form element */
+    form {
+        width:70%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -206,5 +264,25 @@ footer a {
         margin-bottom: 0;
         margin-left: 2%;
         margin-right: 2%;
+    }
+    /* Desktop Viewport: Style rules for table */
+    table {
+        width: 70%;
+    /* Desktop Viewport: Style rules for form elements */
+    }
+    #form-grid {
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+    }
+    #btn {
+        grid-column: 1/span2;
+    }
+}
+/* Media Query for Print */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
     }
 }

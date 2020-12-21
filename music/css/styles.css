@@ -1,6 +1,6 @@
 /*
 Author: Spencer Hinkle
-Date: 11/15/2020
+Date: 12/19/2020
 File Name: styles.css
 */
 
@@ -24,9 +24,11 @@ img {
 
 
 /* Hide tab-desk class */
-.tab-desk {
-    display: none;
+.tab-desk, #menu-links {
+    display: none; 
+
 }
+ 
 /* Style rules for header content */
 header{
     text-align:center;
@@ -37,32 +39,37 @@ header{
 header h1 {
     font-family: 'DM Serif Display', serif;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    padding: 4%;
+    margin-right: 15%;
 }
 /* Style rules for navigation area */
 nav {
     background-color: #373684;
-    ;
 }
 
-nav ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-nav li {
-    display: block;
-    border-top: 1px solid #e5e9fc;
-    font-size: 2em;
-
-}
-
-nav li a {
-    display: block;
+.mobile-nav a {
     color: #fff;
     text-align: center;
-    padding: 0.5em 1em;
+    font-size: 2em;
     text-decoration: none;
+    padding: 3%;
+    display: block;
 }
+
+.mobile-nav a.menu-icon {
+    display: block;
+    position:absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu-icon div {
+    height: 50px;
+    width: 50px;
+    background-color: #373684;
+}
+
 aside {
     text-align: center;
     font-size: 1.5em;
@@ -225,14 +232,23 @@ footer a {
     .tab-desk {
         display: block;
     }
-    .mobile {
+    .mobile, .mobile-nav {
         display: none;
     }
     /*Tablet Viewport: Style rule for header content */
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em; 
+    }
     span.tab-desk {
         display: inline;
     }
     /* Tablet Viewport: Style rules for nav area */
+    nav ul {
+        list-style-type: none;
+        text-align: center;
+    }
     nav li {
         border-top: none;
         display: inline-block;
@@ -249,6 +265,10 @@ footer a {
         padding-bottom: 0.25em;
         padding-left: 0.50em;
         padding-right: 0.50em;
+        display: block;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
     }
     /* Tablet Viewport: Style rule for map */
     .map {
@@ -289,6 +309,7 @@ footer a {
     nav li a:hover {
         color: #373684;
         background-color: #e5e9fc;
+        transform: scale(1.2);
     }
     /* Desktop Viewport: Style rules for main content */
     #info ul {
